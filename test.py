@@ -8,7 +8,7 @@ headers = {
     'x-rapidapi-host': "open-weather13.p.rapidapi.com"
 }
 
-conn.request("GET", "/city/mumbai/EN", headers=headers)
+conn.request("GET", "/city/london/EN", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
