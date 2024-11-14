@@ -1,6 +1,8 @@
 import http.client
 import json
 
+city_name = input("kathmandu:")
+
 conn = http.client.HTTPSConnection("open-weather13.p.rapidapi.com")
 
 headers = {
@@ -8,7 +10,7 @@ headers = {
     'x-rapidapi-host': "open-weather13.p.rapidapi.com"
 }
 
-conn.request("GET", "/city/london/EN", headers=headers)
+conn.request("GET", "/city/kathmandu/EN", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
