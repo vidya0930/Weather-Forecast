@@ -1,7 +1,7 @@
 import http.client
 import json
 
-city_name = input("Enter the city name:")
+city_name = input("Enter the city name: ")
 
 conn = http.client.HTTPSConnection("open-weather13.p.rapidapi.com")
 
@@ -10,7 +10,8 @@ headers = {
     'x-rapidapi-host': "open-weather13.p.rapidapi.com"
 }
 
-conn.request("GET", "/city/{city_name}/EN", headers=headers)
+# Corrected URL path to include the city_name variable
+conn.request("GET", f"/city/{city_name}/EN", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
